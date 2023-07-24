@@ -18,4 +18,4 @@ jobs:
         response=$(curl -X POST -H "Content-Type: text/plain" --data "grant_type=client_credentials&scope=TDriveTestApp" -u "9de1495b-2616-4c99-9197-2857b190f687:bf3a16100d2842e6bc5b48cc8a8f131f" "https://id.trimble.com/oauth/token")
         app_token=$(echo "$response" | jq -r '.access_token')
         echo "app_token=$app_token" >> $GITHUB_OUTPUT
-        echo $app_token
+        echo "app_token+ $app_token"
